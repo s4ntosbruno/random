@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+body {
+  background: black;
+  color: white;
+  font-family: "Roboto Mono", sans-serif;
+  display: flex;
+  height: 50vh;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
