@@ -5,12 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Random Choice Picker</title>
+    <link rel="icon" href="logo.ico" />
+    <title>Random</title>
   </head>
   <body>
-    <input type="text" id="option" onchange="enableButao()" />
-    <button onclick="addToOptions()" id="butao">Butão</button>
+    <header>
+      <h1>Random</h1>
+      <div>
+        <button class="btn-small" onclick="changeColors(0)">R</button>
+        <button class="btn-small" onclick="changeColors(1)">G</button>
+        <button class="btn-small" onclick="changeColors(2)">B</button>
+        <button class="btn-small" onclick="changeColors(3)">R + B</button>
+        <button class="btn-small" onclick="changeColors(4)">G + B</button>
+        <button class="btn-small" onclick="changeColors(5)">R + G</button>
+      </div>
+    </header>
+    <div>
+      <input type="text" id="option" />
+      <button onclick="free()">clear</button>
+      <button onclick="sort()">sort</button>
+    </div>
     <pre id="array"></pre>
+    <div id="selected"></div>
+    <div></div>
     <script src="main.js"></script>
+    <script src="color.js"></script>
   </body>
 </html>

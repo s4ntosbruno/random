@@ -1,13 +1,18 @@
 let options = [];
+let randomElement = "";
 const option = document.getElementById("option");
 document.getElementById("array").innerHTML = options;
-document.getElementById("butao").disabled = !option.value;
 
-function addToOptions() {
+function add() {
   if (option.value) options.push(option.value);
-  clearInput();
-  enableButao();
   updateArray();
+  clearInput();
+}
+
+function free() {
+  if (options) options = [];
+  updateArray();
+  clearInput();
 }
 
 function removeFromOptions(option) {
@@ -23,6 +28,17 @@ function clearInput() {
   option.value = "";
 }
 
-function enableButao() {
-  document.getElementById("butao").disabled = !option.value;
+function sort() {
+  randomElement = options[Math.floor(Math.random() * options.length)];
+  updateSelected();
 }
+
+function updateSelected() {
+  document.getElementById("selected").innerHTML = randomElement;
+}
+
+option.addEventListener("keyup", function (event) {
+  if (event.code === "Enter") {
+    add();
+  }
+});
